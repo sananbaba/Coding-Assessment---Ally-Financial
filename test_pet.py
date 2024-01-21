@@ -13,7 +13,6 @@ def test_pet_schema():
     test_endpoint = "/pets/"
 
     response = api_helpers.get_api_data(test_endpoint)
-    print('here is the code: '+str(response.status_code))
     assert response.status_code == 200, 'Status code validation failed.'
 
     # Validate the response schema against the defined schema in schemas.py
